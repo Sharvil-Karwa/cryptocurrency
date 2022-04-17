@@ -2,7 +2,8 @@ import React from 'react'
 
 const Coin = ({name,image,price,change,market_cap,market_cap_rank}) => {
   const card = {
-      margin: "1rem"
+      margin: "1rem",
+      width: "25rem"
   }
   const cardContent = {
       display: "flex",
@@ -17,7 +18,8 @@ const Coin = ({name,image,price,change,market_cap,market_cap_rank}) => {
   }
   const img = {
       width: "15rem",
-      height: "15rem"
+      height: "15rem",
+      padding: "1rem"
   }
   return (
     <div className='coin-container col-lg-3 col-md-6 card' style={card}>

@@ -24,14 +24,14 @@ const filteredCoins = coins.filter(coin=>
 )
 
 const search1 = {
-  width: "20rem",
+  width: "25rem",
   fontSize: "1.2rem"
 }
 const top = {
   margin: "1rem auto 3rem"
 }
 const cards = {
-  margin: "1rem",
+  // margin: "1rem",
   justifyContent: "center"
 }
   return (
