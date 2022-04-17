@@ -23,25 +23,29 @@ const filteredCoins = coins.filter(coin=>
   coin.name.toLowerCase().includes(search.toLowerCase())
 )
 
-const center = {
+const search1 = {
+  width: "20rem",
+  fontSize: "1.2rem"
+}
+const top = {
+  margin: "1rem auto 3rem"
+}
+const cards = {
+  margin: "1rem",
   justifyContent: "center"
 }
-const search1 = {
-  position: "absolute",
-  top: "1%"
-}
   return (
-    <div className="coin-app">
-      <div className="coin-search" style={search1}>
-          <center>
-          <h1 className="coin-text">
-            Search a currency
-          </h1>
-          <form>
-            <input type="text" placeholder="search" className="coin-input" onChange={handlechange} />
-          </form>
-          </center>
-          <div className="row center" style={center}>
+    <div>
+      <div>
+          <div style={top}>
+            <center>
+              <h1>Cryptocurrency List and Prices</h1>
+              <form style={{position: "relative"}}>
+                <input type="text" placeholder="Search (e.g. Mork)"  onChange={handlechange} style={search1} />
+              </form>
+            </center>
+          </div>
+          <div className="row" style={cards}>
             {filteredCoins.map(coin =>{
               return(
                 <Coin 
